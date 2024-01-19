@@ -2,14 +2,15 @@
 
 This script doesn't block ransomwares but it detects result of ransomware activities and send an alert into an alert Webex Room.
 
-The principle is very simple. It is very difficult to anticipate new ransomwares, What they will be and how they work.
-But we know at 100 % what they will do.
+The principle is very simple. It is very difficult to anticipate new ransomwares, What they will be and how they will swork.
+But we already know at 100 % what they will do.
 
-The goal of ransomwares is to cypher every documents contained into an hard drive or into a shared folder. Encrypted files are mainly office documents.
+The goal of ransomwares is to cypher every documents contained into an hard drive or into a shared folder. 
+And encrypted files will be mainly office documents ( users documents ).
 
-Based on that the idea is to setup an honeypot workstation  and expose this one in order to let it be infected if it is discovered.  Store into a monitored directory into this honeypot some documents and check constantly if something modify them.
+Based on that fact, the idea is to setup an honeypot workstation and expose this one in order to let it be infected if it is discovered.  And store into a monitored directory into this honeypot some documents and check constantly if something modify them.
 
-And send an alert instantly if ever these files are modified. 
+And if ever these files are modified, then instantly send an alert. 
 
 Check if one of these files is modified and send an alert in order to warn the Security Team. Then  let the team to trigger additionnal Investigation to confirm the ransomware attack.
 
@@ -17,7 +18,7 @@ This is exactly what does this script. It is based on the watchdog python librar
 
 This library is absolutely awesome for our goal and for the application efficiency.
 
-Actually thanks to watchdog, we can run permanently in the application in the background. It consume a very very cpu resources. Then it will be able to react in real time if any change happens into a monitored directory and it's subdirectories.
+Actually thanks to watchdog, we can run permanently in the application in the background. It consume very few cpu resources. Then it will be able to react in real time if any change happens into a monitored directory and it's subdirectories.
 
 So the assumption is as the application is installed into an honeypot. So the monitored files are not supposed to change at all. And if they change, then we are sure at 100 % that we face to a malicious activity.
 
@@ -58,3 +59,11 @@ The application is very light in terms of CPU consumption, which make it an appl
 Here is very quickly instruction for converting the python script into an exe.
 
 IN CONSTRUCTION
+
+## What next ? - connect this script to xdr
+
+A relevant next step to this project is to connect it to XDR Automation.
+
+- Add indepth Investigation action in order to understan indepth what the ransomware does into the system
+- Create a documented incident into xdr
+- Trigger some response actions like critical host isolations and preventive snapshots of critical systems
