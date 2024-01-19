@@ -60,7 +60,7 @@ Here is very quickly instruction for converting the python script into an exe.
 
 IN CONSTRUCTION
 
-## What next ? - connect this script to xdr
+## What next ? - connect this script to XDR
 
 A relevant next step to this project is to connect it to XDR Automation.
 
