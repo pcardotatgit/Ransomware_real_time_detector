@@ -2,10 +2,11 @@
 
 This script doesn't block ransomwares but it detects result of ransomware activities and send an alert into an alert Webex Room.
 
-The principle is very simple. It is very difficult to anticipate new ransomwares, What they will be and how they will swork.
-But we already know at 100 % what they will do.
+The principle is very simple. It is very difficult to anticipate new ransomwares, What they will be and what they will exactly execute within an infected system.
 
-The goal of ransomwares is to cypher every documents contained into an hard drive or into a shared folder. 
+But we already know at 100 % what the result of their activities.
+
+The goal of ransomwares is to encrypt every documents contained into an hard drive or into a shared folder. 
 And encrypted files will be mainly office documents ( users documents ).
 
 Based on that fact, the idea is to setup an honeypot workstation and expose this one in order to let it be infected if it is discovered.  And store into a monitored directory into this honeypot some documents and check constantly if something modify them.
